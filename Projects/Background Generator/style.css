@@ -1,0 +1,37 @@
+body{
+    background: linear-gradient(to right, #8BFF00, #18C0FF);
+    text-align: center;
+    color: black;
+    height: 100vh;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h1{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 25px;
+}
+
+h3{
+    font:900 1em 'monospace' 'Calibri';
+    text-align: center;
+    user-select: all;
+    text-transform: lowercase;
+}
+
+button{
+    font-weight: bold;
+    background-color: antiquewhite;
+    border: 1px solid darkslategrey;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+button:hover{
+    transform: rotate(360deg);
+    background-color: aquamarine;
+}

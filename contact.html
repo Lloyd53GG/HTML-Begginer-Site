@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" href="./style/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Aplicam stilul elementului cu atributul href care contine... -->
+        <style>
+            .nav-menu .nav-link[href^="contact"]{
+                color: turquoise;
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Meniu Navigatie Start-->
+        <nav>
+            <ul class="nav-menu">
+                <li>
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="catalog.html" class="nav-link">Catalog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <span id="mode-toggle"></span>
+        </nav>
+        <!-- Meniu Navigatie End -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d64913563.15309657!2d-151.5680687!3d-6.7686984!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cefa577679531%3A0x46c7d47e4de2c9a5!2sGato%20Gaming!5e0!3m2!1sro!2sro!4v1673774408228!5m2!1sro!2sro" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="container-contact">
+            <h1>Contact</h1>
+
+            <div class="contact-box">
+                <h2>Send a message</h2>
+                <form>
+                    <div>
+                        <label>Name</label>
+                        <input type="text" id="name" placeholder="Type name here...">
+                    </div>
+        
+                    <div>
+                        <label">Subject</label>
+                        <input type="text" id="subject" placeholder="Subject">
+                    </div>
+        
+                    <div>
+                        <label>Message</label>
+                        <textarea id="message" placeholder="Type message here..."></textarea>
+                    </div>
+        
+                    <button type="submit" id="send-btn">Send</button>
+                </form>
+
+            </div>
+        </div>
+        <script src="./js/app.js"></script>
+        <script src="./js/contact.js"></script>
+    </body>
+    </html>

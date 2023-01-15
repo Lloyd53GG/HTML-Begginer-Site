@@ -1,0 +1,25 @@
+#game {
+    max-width: 500px;
+    border: 1px solid darkcyan;
+    border-radius: 10000px;
+    padding: 30px;
+    margin: 30px auto;
+    text-align: center;
+}
+.canvas {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#ex{
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+#result{
+    font-size: 24px;
+    padding: 5px;
+}

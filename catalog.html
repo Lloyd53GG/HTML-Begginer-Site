@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Catalog</title>
+        <link rel="stylesheet" href="./style/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Aplicam stilul elementului cu atributul href care contine... -->
+        <style>
+            .nav-menu .nav-link[href^="catalog"]{
+                color: turquoise;
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Meniu Navigatie Start-->
+        <nav>
+            <ul class="nav-menu">
+                <li>
+                    <a href="home.html" class="nav-link">Home</a>
+                </li>
+                <li>
+                    <a href="catalog.html" class="nav-link">Catalog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <span id="mode-toggle"></span>
+        </nav>
+        <!-- Meniu Navigatie End -->
+
+        <!-- Continut pagina -->
+        <main class="catalog">
+            <form id="searchForm">
+                <input type="text" placeholder="Cauta">
+                <button type="submit">Cauta</button>
+            </form>
+            <ul class="cards-list"></ul>
+        </main>
+
+        <script src="./js/app.js"></script>
+        <!-- Sectiune Firebase -->
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+            import { getDatabase, ref, child, get} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyDSri9HqKI9LvlMm6Gjn1vtsNEPbmxSJew",
+                authDomain: "html-2-f2d7a.firebaseapp.com",
+                databaseURL: "https://html-2-f2d7a-default-rtdb.firebaseio.com",
+                projectId: "html-2-f2d7a",
+                storageBucket: "html-2-f2d7a.appspot.com",
+                messagingSenderId: "190403830331",
+                appId: "1:190403830331:web:e7f66f997f3ce875a4b21e"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            // Initializam baza de date
+            const database = getDatabase(app);
+            // Referinta catre baza de date
+            const dbRef = ref(database)
+
+            get(child(dbRef, 'projects'))
+                .then(function (data){
+                    if(data.exists()){
+                        const listaProiecte = data.val()
+                        // console.log(listaProiecte)
+
+                        listaProiecte.forEach(function(project) {
+                            console.log(project)
+                            generateCard(project);
+                        });
+
+                        // Salvam proiectele din baza de date intr-o lista, pentru a le putea filtra
+                        projects = listaProiecte;
+                    }
+                    else{
+                        console.log("no data available")
+                    }
+                })
+
+                .catch(function(error){
+                    console.log(error)
+                })
+          </script>
+    </body>
+</html>

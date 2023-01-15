@@ -1,0 +1,361 @@
+body{
+    margin: 0;
+}
+body.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+/* Meniu Navigatie */
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-shadow: 5px 0px 15px 3px #10909A;
+}
+
+/* Dark-mode meniu navigatie */
+.dark-mode .nav-menu {
+    box-shadow: 0px 0px 15px 5px crimson
+}
+
+
+.nav-menu li{
+    /* width: 33.3% */
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.nav-menu .nav-link{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: crimson;
+    user-select: none;
+}
+
+.dark-mode .nav-menu .nav-link {
+    color: antiquewhite
+}
+
+.nav-menu li:hover .nav-link{
+    transition: all 0.3s ease-in-out;
+    color:gold;
+    letter-spacing: 2px;
+}
+
+#mode-toggle{
+    background-image: url(../img/Dark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s linear;
+}
+
+#mode-toggle:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+/* Sectiune Jumbotron */
+.jumbotron-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    padding: 0 30px;
+    background: linear-gradient(
+        rgba(0, 255, 240, 0.25),
+        rgba(229, 0, 100, 0.45)
+    ),
+    url("https://source.unsplash.com/1600x900/?dog");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: antiquewhite;
+    text-shadow: 0px 0px 2px darkcyan;
+    font-size: 1.5em;
+}
+
+.jumbotron-section .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(red, green, blue, alpha)
+}
+
+.jumbotron-section h1,
+.jumbotron-section p{
+    font-weight: 400;
+}
+
+@keyframes color-change{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+    100%{
+        filter: hue-rotate(0deg);
+    }
+
+}
+/* Sectiune Text */
+.page-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+.page-content .page-content--text{
+    margin-right: 30px;
+    width: 30%;
+}
+.page-content .page-content--img{
+    width: 50%;
+    border-radius: 15px;
+    animation: color-change 4s infinite;
+}
+
+/* Sectiune Carduri */
+.cards-container{
+    padding: 50px 30px;
+}
+.cards-container h2{
+    font-size: 40px;
+    text-align: center;
+}
+.cards-list{
+    display: grid;
+    grid-gap: 1rem;
+    list-style-type: none;
+    padding:0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card img{
+    width: 100%;
+    border-radius: 5px;
+}
+.card-list li{
+    padding: 0;
+    margin: 0;
+}
+.card{
+    padding: 25px;
+    border: 1px solid #10909A;
+    border: radius 5px;
+}
+
+/* Dark mode carduri */
+.dark-mode .card {
+    border-color: crimson;
+}
+
+.card .card-content button{
+    background-color:antiquewhite;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 40px;
+    transition: all 0.3s linear;
+}
+
+/* Dark mode carduri butoane */
+.dark-mode .card .card-content button {
+    background-color: #333;
+    color: antiquewhite;
+    border-color: antiquewhite;
+}
+
+.card .card-content button:hover{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    border: 1px solid #696969;
+}
+
+/* Dark mode button hover */
+.dark-mode .card .card-content button:hover {
+    background-color: antiquewhite;
+    color: #333;
+    border-color: #333;
+}
+
+
+/* Sectiune Footer */
+footer{
+    background-color:black;
+    color: white;
+    padding: 20px 30px;
+}
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+/* Pagina catalog */
+.catalog {
+    margin: 40px auto;
+    padding: 50px 30px;
+}
+
+.catalog form {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.catalog form input {
+    min-width:50%;
+    line-height: 30px;
+    margin-top: 20px;
+    padding: 5px;
+    
+    border: 1px 1px solid black;
+    border-radius: 15px;
+}
+
+.catalog form button {
+    width: 100px;
+    line-height: 30px;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    cursor: crosshair;
+    transition: all 0.5s linear;
+}
+
+.catalog form button:hover {
+    background-color: black;
+    color: white;
+    border:1px solid white
+}
+
+/* Dark mode Catalog */
+.dark-mode .catalog form button {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .catalog form button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Pagina Contact */
+iframe {
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+}
+
+.container-contact {
+    margin: 50px auto;
+}
+
+.container-contact h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact-box {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.contact-box form button {
+    width: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    background-color: antiquewhite;
+    color: #333;
+}
+
+.contact-box form button:hover {
+    cursor: pointer;
+    border-color: antiquewhite;
+    background-color: #333;
+    color: antiquewhite;
+    transition: all 0.5s;
+}
+
+.dark-mode .contact-box form button {
+    border-color: antiquewhite;
+    background-color: #333;
+    color: antiquewhite;
+}
+
+.dark-mode .contact-box form button:hover {
+    border-color: #333;
+    background-color: antiquewhite;
+    color: #333;
+    transition: all 0.5s;
+}
+
+
+@media only screen and (max-width: 600px){
+    .jumbotron-section h1{
+        margin: 5px 30px !important;
+        font-size: 1.2em;
+    }
+    .jumbotron-section p{
+        font-size: 0.8em;
+        margin: 0 30px;
+    }
+    .page-content{
+        display: block;
+    }
+    .page-content .page-content--img,
+    .page-content .page-content--text{
+        width: 100%;
+    }
+    .nav-menu{
+        width: 80%;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .cards-list{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .cards-list{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

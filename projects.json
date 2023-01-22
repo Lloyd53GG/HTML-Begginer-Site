@@ -2,42 +2,42 @@
     "projects": [
         {
             "nume": "Animation",
-            "descriere": "O animatie care arata interesant",
+            "descriere": "An animation that looks interesting",
             "limbajeDeProgramare": [ "HTML", "CSS"],
             "imagine": "./img/Animation.png",
             "link": "./Projects/Animation/index.html"
         },
         {
             "nume": "Background Generator",
-            "descriere": "Un program care genereaza background-uri din doua culori",
+            "descriere": "A program that generates backgrounds from two colors",
             "limbajeDeProgramare": [ "HTML", "CSS", "JavaScript"],
             "imagine": "./img/Generator.png",
             "link": "./Projects/Background Generator/index.html"
         },
         {
             "nume": "Canvas",
-            "descriere": "Un om de zapada inconjurat de fulgi animati",
+            "descriere": "A snowman surrounded by animated snowflakes",
             "limbajeDeProgramare": [ "HTML", "CSS", "JavaScript"],
             "imagine": "./img/Canvas.png",
             "link": "./Projects/Canvas/index.html"
         },
         {
             "nume": "Math Challange",
-            "descriere": "Un joc de matematica usor pentru a-ti imbunatati abilitatile la adunare",
+            "descriere": "An easy math game to improve your addition skills",
             "limbajeDeProgramare": [ "HTML", "CSS", "JavaScript"],
             "imagine": "./img/Math.png",
             "link": "./Projects/Math Challenge/index.html"
         },
         {
             "nume": "Memory Game",
-            "descriere": "Jocul clasic in care trebuie sa memorezi 5 perechi de cartonase. ATENTIE! Nu poti ridica doar 2 cartonase o data!",
+            "descriere": "The classic game in which you have to memorize 5 pairs of cards. ATTENTION! You can only pick up 2 cards at a time!",
             "limbajeDeProgramare": [ "HTML", "CSS", "JavaScript"],
             "imagine": "./img/Memory.png",
             "link": "./Projects/Memory Game/index.html"
         },
         {
-            "nume": "X si O",
-            "descriere": "Pune 3 x-uri sau 0-uri pe o linie coloana sau diagonala pentru a castiga. ",
+            "nume": "X & O",
+            "descriere": "Place 3 x's or 0's on a column or diagonal line to win",
             "limbajeDeProgramare": [ "HTML", "CSS", "JavaScript"],
             "imagine": "./img/XO.png",
             "link": "./Projects/XO/index.html"

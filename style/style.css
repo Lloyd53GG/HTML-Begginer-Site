@@ -81,7 +81,7 @@ body.dark-mode {
         rgba(0, 255, 240, 0.25),
         rgba(229, 0, 100, 0.45)
     ),
-    url("https://source.unsplash.com/1600x900/?dog");
+    url("https://source.unsplash.com/1600x900/?HTML");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -211,7 +211,7 @@ footer{
 }
 footer p {
     text-align: center;
-    margin: 0;
+    margin: 10px auto;
 }
 
 /* Pagina catalog */
@@ -243,7 +243,7 @@ footer p {
     border: 1px solid black;
     border-radius: 15px;
     background-color: white;
-    color: black;
+    color: #333;
     cursor: crosshair;
     transition: all 0.5s linear;
 }

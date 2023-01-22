@@ -18,23 +18,26 @@ if (searchForm) {
 // Verificam daca valoarea introdusa in input se regaseste si in numele proiectului
 function searchProjects(event) {
     event.preventDefault()
-    // console.log(event)
-    const searchValue = searchInput.value
-    // console.log(searchValue)
-    const found = projects.find(proiect => proiect.nume.toLowerCase().includes(searchValue.toLowerCase()));
+    setTimeout(function(){
+        // console.log(event)
+        const searchValue = searchInput.value
+        // console.log(searchValue)
+        const found = projects.find(proiect => proiect.nume.toLowerCase().includes(searchValue.toLowerCase()));
 
-    if(!found || !searchValue) {
-        // Nu s-a gasit valoarea, returnam toate proiectele
-        cardsContainer.innerHTML = ""
-        projects.forEach(function(proiect) {
-            generateCard(proiect)
-        })
-        // projects.forEach(proiect => generateCard(proiect))
-    } else {
-        // S-a gasit o valoare, returnam proiectul respectiv
-        cardsContainer.innerHTML = ""
-        generateCard(found)
-    }
+        if(!found || !searchValue) {
+            // Nu s-a gasit valoarea, returnam toate proiectele
+            cardsContainer.innerHTML = ""
+            projects.forEach(function(proiect) {
+                generateCard(proiect)
+            })
+            // projects.forEach(proiect => generateCard(proiect))
+        } else {
+            // S-a gasit o valoare, returnam proiectul respectiv
+            cardsContainer.innerHTML = ""
+            generateCard(found)
+        }
+    }, 200)
+
 }
 
 

@@ -302,6 +302,7 @@ iframe {
     border: 1px solid #333;
     background-color: antiquewhite;
     color: #333;
+    margin-left: 100px;
 }
 
 .contact-box form button:hover {
@@ -343,8 +344,36 @@ iframe {
         width: 100%;
     }
     .nav-menu{
-        width: 80%;
+        /* width: 80%; */
         box-shadow: none;
+    }
+
+    .nav-menu .nav-link {
+        font-size: 1rem;
+    }
+
+    .nav-menu li {
+        padding: 10px;
+        margin-right: 15px;
+    }
+
+    .contact-box {
+        max-width: 300px;
+        margin: 30px 10px;
+    }
+
+    #mode-toggle{
+        background-image: url(../img/Dark.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        transition: transform 0.5s linear;
     }
 }
 
